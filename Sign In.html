@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logos/Favicon.png" sizes="160x160">
+    <meta charset="UTF-8">
+    <meta name="description" content="Sign up in Timt. Timt is a time management website.">
+    <meta name="keywords" content="Sign up, create email, time management, Timt">
+    <meta name="author" content="IVIC">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="css/sign in.css">
+
+    <title>Timt</title>
+
+
+</head>
+
+<body>
+            <div class="timit-logo">
+            <a href="homepage.html" ><img src="logos/timt shw.png" alt="Timt logo" ></a>
+        </div>
+
+    <form action="timt.php" method="post">
+
+        <div class="inputs">
+
+            <div>
+                <input type="text" id="em"  required>
+                <label for="em">Email/username</label>
+            </div>
+
+            <div>
+
+                <input type="password" id="pwd" required>
+                <label for="pwd">Password</label>
+
+
+            </div>
+        </div>
+        <div class="submit">
+        <button type="submit" class="button"><strong>Log In</strong></button>
+    </div>
+
+    <div class="f-pwd">
+        <a href="forgotten_password.html">Forgotten Password?</a>
+    </div>   
+
+    <div class="sign-up">
+        Don’t have an account?<a href="sign up.html"> Sign Up</a>
+    </div>
+    </form>
+
+    <script src="js/sign in.js"></script>
+<?php  include 'php/sign%20in.php' ?>
+
+    
+</body>
+
+</html>

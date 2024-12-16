@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المهام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #todo-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .comment-section {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .comment-section textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .select-status {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>قائمة المهام</h1>
+        <ul id="todo-list">
+            <!-- سيتم إضافة المهام هنا -->
+        </ul>
+
+        <input type="text" id="task-input" placeholder="أضف مهمة جديدة">
+        <button id="add-task-btn">إضافة مهمة</button>
+    </div>
+
+    <script>
+        document.getElementById('add-task-btn').addEventListener('click', function() {
+            const taskInput = document.getElementById('task-input');
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                addTask(taskText);
+                taskInput.value = '';  // Clear input field
+            }
+        });
+
+        function addTask(taskText) {
+            const taskList = document.getElementById('todo-list');
+
+            const taskItem = document.createElement('li');
+            taskItem.innerHTML = `
+                <span>${taskText}</span>
+                <div>
+                    <button class="status-btn" onclick="changeStatus(this, 'completed')">تم</button>
+                    <button class="status-btn" onclick="changeStatus(this, 'deferred')">تأجيل</button>
+                    <button class="status-btn" onclick="changeStatus(this, 'not-done')">حذف/لم يتم</button>
+                </div>
+                <div class="comment-section">
+                    <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+                </div>
+            `;
+            
+            taskList.appendChild(taskItem);
+        }
+
+        function changeStatus(button, status) {
+            const taskItem = button.closest('li');
+            const commentSection = taskItem.querySelector('.comment-section');
+            const textarea = commentSection.querySelector('textarea');
+
+            // Show the comment section and reset the textarea
+            commentSection.style.display = 'block';
+            textarea.value = '';
+
+            if (status === 'completed') {
+                commentSection.style.backgroundColor = '#d4edda';
+                textarea.placeholder = 'لماذا تم إنجاز هذه المهمة؟';
+            } else if (status === 'deferred') {
+                commentSection.style.backgroundColor = '#fff3cd';
+                textarea.placeholder = 'لماذا تم تأجيل المهمة؟';
+            } else if (status === 'not-done') {
+                commentSection.style.backgroundColor = '#f8d7da';
+                textarea.placeholder = 'لماذا لم تتم المهمة؟';
+            }
+        }
+    </script>
+</body>
+</html>
