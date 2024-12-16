@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logos/Favicon.png">
+    <link rel="stylesheet" href="css/nav bar.css">
+  <link rel="stylesheet" href="css/footer.css">
+    <title>timit</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2d261a;
+            color: #fff;
+        }
+
+        .calendar-header {
+            text-align: center;
+            padding: 15px;
+            background-color: #201a13;
+            color: #fff;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calendar-header button {
+            background-color: #e2b165;
+            color: #000;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .calendar-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: auto;
+            gap: 1px;
+            background-color: #1a1510;
+            text-align: center;
+        }
+
+        .day-header {
+            background-color: #3e3426;
+            color: #e2b165;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        .day-cell {
+            background-color: #201a13;
+            border: 1px solid #3e3426;
+            color: #bbb;
+            height: 100px;
+            position: relative;
+        }
+
+        .day-cell .date {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .today {
+            background-color: #e2b165;
+            color: #000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+     <header>
+    <a href="homepage.html"><img src="logos/Timt gradiant 1.png" alt="TIMT logo" id="timt"></a>
+    <a href="homepage.html">Home Page</a>
+
+    <div class="drop-down">
+      <button onclick="drop('dropcon1')" class="dropbtn">Features</button>
+      <div class="drop-content" id="dropcon1">
+        <a href="time tracking.html">Time Tracking</a>
+        <a href="#">Habits and Routine</a>
+        <a href="#">Reward system</a>
+        <a href="documentation.html">Documentation/Dairy</a>
+      </div>
+    </div>
+
+    <!-- <div class="drop-down">
+      <button onclick="drop('dropcon2')" class="dropbtn">Features 2</button>
+      <div class="drop-content" id="dropcon2">
+        <a href="#">Time Tracking</a>
+        <a href="#">Habits and Routine</a>
+        <a href="#">Reward system</a>
+        <a href="#">Documentation/Dairy</a>
+      </div>
+    </div> -->
+  </header>
+
+
+
+  <!------------------------------------------------------------------------------------------>
+    <div class="calendar-header">
+        <button onclick="prevMonth()">&#9664; السابق</button>
+        <div id="month-year"></div>
+        <button onclick="nextMonth()">التالي &#9654;</button>
+    </div>
+    <div class="calendar-container" id="calendar">
+        <div class="day-header">الأحد</div>
+        <div class="day-header">الإثنين</div>
+        <div class="day-header">الثلاثاء</div>
+        <div class="day-header">الأربعاء</div>
+        <div class="day-header">الخميس</div>
+        <div class="day-header">الجمعة</div>
+        <div class="day-header">السبت</div>
+    </div>
+
+<!-------------------------------------------------------------------------------->
+
+
+
+<footer class="main-footer">  
+  <footer class="footer-1">
+    <div class="about-us">
+      <h2>About Us</h2>
+      <a href="about us.html"><img src="logos/Ivic white.png" alt="IVIC logo" id="ivic"></a>
+      <div class="us-content">
+        IVIC Team
+       <br>
+        We are students at the Faculty of Computers and Info at Arish University trying to make people's lives easier and more secure.
+      </div>
+    </div>
+
+    <div class="quick links">
+    <h2>Quick Links</h2>
+    <a href="homepage.html">Home</a>
+    <a href="">Services</a>
+    <a href="about us.html">About Us</a>
+    <a href="FAQ.html">FAQ</a>
+    </div>
+
+    <div class="contact-us">
+      <h2>Contact US</h2>
+      <div class="us-con-content">
+        <div> E:mail : ivic.fci@gmail.com </div>
+        <br>
+        <div> Phone :20 000 00 </div>
+        <br>
+        <div> Address: Arish University </div>
+    </div>
+    </div>
+
+    <div class="follow-us">
+        <h2>Follow Us</h2>
+        <div class="follow-content">
+        
+            
+            <a href="#"><img src="pics/social media icons/youtube 2.png" alt="Youtube"></a>
+            <a href="#"><img src="pics/social media icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="pics/social media icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="pics/social media icons/github.png" alt="GitHup"></a>
+            <a href="#"><img src="pics/social media icons/twitter.png" alt="X"></a>
+        
+        
+
+        </div>
+    </div>
+
+
+ 
+
+  </footer>
+  
+  <footer class="footer-2">
+   <div class="copy-right">
+        &copy; 2024 TIMT All Rights Reserved
+    </div>
+  </footer>
+</footer> 
+
+
+
+
+
+<script src="js/nav bar.js"></script>
+
+
+    <script>
+        const monthYear = document.getElementById("month-year");
+        const calendar = document.getElementById("calendar");
+
+        let date = new Date();
+
+        function renderCalendar() {
+            calendar.innerHTML = `
+        <div class="day-header">الأحد</div>
+        <div class="day-header">الإثنين</div>
+        <div class="day-header">الثلاثاء</div>
+        <div class="day-header">الأربعاء</div>
+        <div class="day-header">الخميس</div>
+        <div class="day-header">الجمعة</div>
+        <div class="day-header">السبت</div>
+      `;
+
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const today = new Date();
+            const monthNames = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+                "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+            monthYear.textContent = `${monthNames[month]} ${year}`;
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement("div");
+                emptyCell.classList.add("day-cell");
+                calendar.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement("div");
+                dayCell.classList.add("day-cell");
+                dayCell.setAttribute("contenteditable", "true");
+                dayCell.innerHTML = `<span class="date">${day}</span>`;
+                if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
+                    dayCell.classList.add("today");
+                }
+
+                calendar.appendChild(dayCell);
+            }
+
+            loadNotes();
+        }
+
+        function prevMonth() {
+            saveNotes();
+            date.setMonth(date.getMonth() - 1);
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            saveNotes();
+            date.setMonth(date.getMonth() + 1);
+            renderCalendar();
+        }
+
+        function saveNotes() {
+            const notes = {};
+            const cells = document.querySelectorAll(".day-cell");
+
+            cells.forEach((cell, index) => {
+                const text = cell.textContent.trim();
+                if (text) {
+                    notes[index] = text;
+                }
+            });
+
+            localStorage.setItem(`calendarNotes-${date.getFullYear()}-${date.getMonth()}`, JSON.stringify(notes));
+        }
+
+
+        function loadNotes() {
+            const notes = JSON.parse(localStorage.getItem(`calendarNotes-${date.getFullYear()}-${date.getMonth()}`)) || {};
+            const cells = document.querySelectorAll(".day-cell");
+
+            Object.keys(notes).forEach(index => {
+                if (cells[index]) {
+                    cells[index].textContent = notes[index];
+                }
+            });
+        }
+
+
+        window.addEventListener("beforeunload", saveNotes);
+
+
+        renderCalendar();
+    </script>
+</body>
+
+</html>
