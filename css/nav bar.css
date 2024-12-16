@@ -1,0 +1,114 @@
+   *{
+      --header-bg:#20263e;
+      --header-color:	#c4ffff;
+      --header-font:20px;
+      --hover-color:#bbbbbb;
+      margin: 0 ;
+
+    }
+    header {
+      background-color: var(--header-bg);
+      display: flex;
+      align-items: center;
+      color:var(--header-color);
+      box-shadow: 0px 8px 16px rgba(170, 170, 170, .9);
+      /* border-radius: 20px; */
+      font-size: var(--header-font);
+      padding-bottom: 10px;
+    
+   
+    }
+
+  
+header a ,header .drop-down {
+  margin-right: 30px;
+}
+
+header a{
+  text-decoration: none;;
+  color:var(--header-color);
+}
+
+header a:hover{
+  text-decoration: none;;
+  color:var(--hover-color);
+}
+
+    #timt {
+      width:180px;
+      margin: 10px 10px 0px 10px;
+      transition: .3s ease-in-out;
+    }
+ #timt:hover {
+      width:195px;
+      /* scale: 1.1; */
+      margin: 10px 10px 0px 10px;
+    }
+    .drop-down {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropbtn {
+      appearance: none;
+      border: none;
+      outline: none;
+      background: none;
+      position: relative;
+      padding: 10px 20px;
+      cursor: pointer;
+    font-size: var(--header-font);
+      transition: .3s;
+      color: var(--header-color);
+      font-size: var(--header-font);
+    }
+
+    .dropbtn::after {
+      content: "";
+      position: absolute;
+      bottom: 16px;
+      left: 100%;
+      transform: translateX(-50%);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid rgb(0, 0, 0); /* Default arrow */
+      transition: transform .3s ease;
+    }
+
+    .dropbtn:hover {
+       color:var(--hover-color);
+    }
+
+    .drop-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, .2);
+      z-index: 1;
+    }
+
+    .drop-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .drop-content a:hover {
+      background-color: #f1f1f1;
+       color:var(--hover-color);
+    }
+
+    .show {
+      display: block;
+    }
+
+    .dropbtn.open::after {
+      transform: translateX(-50%) rotate(180deg); /* Rotate arrow when dropdown is open */
+    }
+
+    .dropbtn:hover:active::after {
+      border-bottom: 6px solid rgb(64, 133, 224); /* Blue arrow when pressed */
+      border-top: none; /* Remove top arrow */
+    }

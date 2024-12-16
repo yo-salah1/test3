@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.tlogo{
+
+	width:180px;
+	height:auto;
+	transition: .3s;
+
+}
+
+
+
+
+.tlogo:hover{
+
+	width:195px;
+	
+
+}
+
+
+.mintor-pic{
+	width:500px;
+	scroll-behavior:smooth;
+	scrollbar-color: red;
+	scroll-padding: 50px;
+	scrollbar-width: 80px;
+	
+}
+
+
+
+
+
+html{
+	scroll-behavior:smooth;
+	scrollbar-color: red;
+	scroll-padding: 50px;
+	
+}
+
+
+
+
+
+
+@keyframes scale-a-lil {
+  from {
+    scale: .5;
+  }
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+  .f1img, .f2img , .f3img , .f4img {
+    animation: scale-a-lil linear both;
+    animation-timeline: view();
+    animation-range: 25vh 75vh;
+  }
+}
+
+
+
+a:hover{
+	color:rgb(14, 186, 224) !important; 
+	
+	
+}
+
+
+
+/* 
+.text-img {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+} */
+
+/* The typing effect
+@keyframes typing {
+  from { width: 0 }
+  to { width: 88% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+} */

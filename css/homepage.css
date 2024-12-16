@@ -1,0 +1,153 @@
+/* .container-fluid{
+background-color: rgb(119, 91, 91);
+} */
+.navbar-brand {
+   font-style:italic;
+   font-size: larger;
+   /* position: fixed; */
+   height: 5%;
+   
+
+}
+/* .img1 {
+    width: 100%;
+    opacity: 0.5;
+} */
+ body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ .div-img {
+    position: relative;
+ }
+.div-img img{
+   width: 100%;
+   height: auto;
+   opacity: 0.7;
+
+}
+.text-img {
+    position: absolute;
+    top: 10%;
+    padding-left: 0px;
+    left: 60% ;
+    /* transform: translate(-10% ,-90%); */
+    color: rgb(114, 137, 142);
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* padding: 20px; */
+}
+.div1 {
+    color: rgb(114, 137, 142);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+}
+
+
+.f1d{
+   /* background-color: black; */
+   padding-left: 20%;
+}
+.f1 {
+   font-size: 50px;
+   color:  rgb(114, 137, 142) ;
+   /* transition: all 0.6s ease-in-out; */
+}
+.f1p {
+   font-size: 20px;
+   color: rgb(69, 78, 95);
+   padding-left: 60px ;
+}
+.f1img {
+   display: flex;
+   justify-content: center;
+   gap: 10%;
+
+}
+.f1img img {
+   width: 300px;
+   height: auto;
+   border-radius: 20px;
+   
+}
+
+.f2d{
+   /* background-color: black; */
+   padding-left: 20%;
+}
+.f2 {
+   font-size: 50px;
+   color:  rgb(114, 137, 142) ;
+}
+.f2p {
+   font-size: 20px;
+   color: rgb(69, 78, 95);
+   padding-left: 60px ;
+}
+.f2img {
+   display: flex;
+   justify-content: center;
+   gap: 10%;
+
+}
+.f2img img {
+   width: 300px;
+   height: auto;
+   border-radius: 20px;
+}
+
+
+.f3d{
+   /* background-color: black; */
+   padding-left: 20%;
+}
+.f3 {
+   font-size: 50px;
+   color:  rgb(114, 137, 142) ;
+}
+.f3p {
+   font-size: 20px;
+   color: rgb(69, 78, 95);
+   padding-left: 60px ;
+}
+.f3img {
+   display: flex;
+   justify-content: center;
+   gap: 10%;
+
+}
+.f3img img {
+   width: 300px;
+   height: auto;
+   border-radius: 20px;
+}
+
+
+.f4d{
+   /* background-color: black; */
+   padding-left: 20%;
+}
+.f4 {
+   font-size: 50px;
+   color:  rgb(114, 137, 142) ;
+}
+.f4p {
+   font-size: 20px;
+   color: rgb(69, 78, 95);
+   padding-left: 60px ;
+}
+.f4img {
+   display: flex;
+   justify-content: center;
+   gap: 10%;
+
+}
+.f4img img {
+   width: 300px;
+   height: auto;
+   border-radius: 20px;
+}
