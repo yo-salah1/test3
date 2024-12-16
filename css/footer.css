@@ -22,13 +22,11 @@
     padding-bottom: 13px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, .2);
     margin-top: auto ;
-    width:100%;
+    max-width:100%;
     background-color: var(--footer-color);
     color:var(--footer-fontc);
     padding-top: 20px;
-    align-items: center;
-    justify-content: center;
-    
+ 
     
     
 
@@ -42,11 +40,13 @@
     margin-right: 100px;
     justify-content: center;
     margin-top: 15px;
+    max-width:100%;
+
 
 }
 
 #ivic{
-    width:100px;
+    max-width:100px;
     transition: .5s;
 }
 #ivic:hover{
@@ -55,7 +55,7 @@
 }
 
 .about-us{
-    width:300px;
+    max-width:300px;
     margin-right: 100px;
 }
 .quick{
@@ -132,7 +132,7 @@
   
 }
 .follow-us a img {
-      width: 30px;
+    max-width: 30px;
       margin-right: 10px;
       transition: .3s;
 }
@@ -142,17 +142,90 @@
 }
 
 
-@media screen and (max-width:0px) {
-  body {
-    /* background-color: rgb(135, 216, 135); */
-    width: 50px;
-    margin:50px;
-
-  }
-}
-
-@media (min-width: 10px) {
-    #tasks .task {
-        padding: 1rem 2rem;
+ .about-us{
+         margin-left:50px;
     }
+
+   .us-content{
+        /* padding: 150px; */
+       min-width:200px;
+       padding: 0;
+      
+       
+    }
+
+
+@media screen and (max-width: 480px) {
+ 
+    .main-footer{
+         display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .footer-1  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    margin-left:100px;
+    justify-content: center;
+    /* margin-top: ;15px */
+    /* width:480; */
+
 }
+    .footer-2{
+   display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    margin-left:auto;
+    justify-content: center;
+    margin-top: 15px;
+    }
+    .copy-right{
+        margin-left:px;
+    }
+   .about-us,.quick,.follow-us,.contact-us{
+        margin-top:30px;
+    }
+
+    .follow-us{
+        margin-left: 13px;
+       
+       
+
+    }
+  .about-us,.us-content{
+        
+         width: 100%;
+         /* margin-left: -10px; */
+         margin:0;
+    }
+
+
+}
+
+
+/* @media screen and (max-width: 768px) {
+    footer.footer-1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+
+    }
+
+    footer.footer-1 .about-us, 
+    footer.footer-1 .quick.links, 
+    footer.footer-1 .contact-us, 
+    footer.footer-1 .follow-us {
+        text-align: center;
+        margin-bottom: 15px;
+        margin-left: auto;
+    }
+} */
+
+ 
+
+   
