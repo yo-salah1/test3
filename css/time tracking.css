@@ -267,3 +267,19 @@ background-color: beige;
 } */
 
 
+@media screen and (max-width: 480px){
+    body{
+            display: flex;
+            justify-content: center;
+            align-items: center
+    }
+
+    #taskForm{
+        width:80%;
+        
+    }
+
+    .task{
+                
+    }
+}
